@@ -252,9 +252,6 @@ endif
 ifeq (, $(findstring amiga, $(OS)))
 	$(INSTALL) -d $(DESTDIR)$(INSTALLDIRMAN)/man3
 	$(INSTALL) -m 644 man3/miniupnpc.3 $(DESTDIR)$(INSTALLDIRMAN)/man3/miniupnpc.3
-ifneq (, $(findstring linux, $(OS)))
-	gzip -f $(DESTDIR)$(INSTALLDIRMAN)/man3/miniupnpc.3
-endif
 endif
 
 install-static:	updateversion $(FILESTOINSTALL)
